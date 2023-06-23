@@ -103,7 +103,7 @@ jobs:
           install-only: true
       - uses: cachix/install-nix-action@v22
         with:
-          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+          github_access_token: ${{ secrets.NGITHUB_TOKEN }}
       - name: dockerhub-login
         if: startsWith(github.ref, 'refs/tags/v')
         uses: docker/login-action@465a07811f14bebb1938fbed4728c6a1ff8901fc # v2
